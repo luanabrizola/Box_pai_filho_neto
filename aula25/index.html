@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução a responsividade</title>
+
+
+
+    <style> 
+           /*se tiver % sempre será em relação ao pai
+        vw tamanho relativo a largura da tela
+        vh tamanho relativo a altura da tela
+        px tamanho absoluto 
+        min-width - define o tamanho minimo do elemento
+        max-width - define o tamanho maximo do elemento*/
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
+        }
+
+        .container{
+            background-color: rgb(171, 167, 187);
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .box1{
+            background-color: rgb(165, 68, 108);
+            width: 50%;
+            height: 100px;}
+        .box2{
+            background-color: rgb(33, 41, 141);
+            width: 50vw;
+            height: 10vh;}
+        .box3{
+            background-color: rgb(77, 28, 168);
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            margin: 15px;
+            padding: 10px;
+        }
+
+        .box{
+            border: 1px solid black;
+            padding: 15px;
+            font-size: 12px;
+        }
+
+        .pai{
+            font-size: 20px;
+        }
+
+        .filho{
+            font-size: 1.2em;
+        }
+
+        .neto{
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+      
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3">Olá</div>
+        
+            <div class="box pai">Pai
+                <div class="box filho">Filho
+                    <div class="box neto">Neto
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+</body>
+</html>
